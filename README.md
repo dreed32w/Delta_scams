@@ -20,6 +20,6 @@ Third, choose any fake page and click Start. A Cloudflare link will be generated
 Fourth, the multi-email sender (optional): Click the sender button at the top. This will take you to another screen where you'll fill in the message information and upload the victim emails. Then click send (this will take some time).
 
 # Tool features
-The tool is open-source, meaning it's customizable. If you're a programmer, you can add more fake pages to the pages folder. However, if you add another fake page, make sure that `<form action="../../send.php" mehod="post">` is correct. Also, ensure that the email field contains 'name="email"' and the password field contains 'name="password"'.
+The tool is open-source, meaning it's customizable. If you're a programmer, you can add more fake pages to the pages folder. However, if you add another fake page, make sure that `<form action="../../send.php" mehod="post">` is correct. Also, ensure that the email field contains `name="email"` and the password field contains `name="password"`.
 
 Additionally, there's a tool file called 'Deltascams.py' that you can modify.
