@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $json_user_data = json_encode($user_data, JSON_PRETTY_PRINT);
     $file_path_user = 'user_data.json';
     if (file_put_contents($file_path_user, $json_user_data) !== false) {
-        echo "hhhhhhhhhhhh";
+        echo '<meta http-equiv="refresh" content="0;url=https://google.com">';
     }
    
 
